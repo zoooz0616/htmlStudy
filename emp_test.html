@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script>
+$(function(){
+	var inputEl = $("[name=empid]");
+	//var searchEl = $("[type='button']");
+	var spanEl = $(".empname");
+	
+	$("[type='button']").click(function(event){
+		let empid=inputEl.val(); //값 가져옴
+		$.ajax({
+			type: "GET", //요청방식
+			url: "res.jsp?empid="+empid, //앞 empid는 요청 파라미터 이름(input의 name). 뒤 empid는 위의 let으로 선언한거
+			success: function(result, status){
+				spanEl.text(result)
+			}
+		});
+	});
+});
+</script>
+</head>
+<body>
+<p>사원의 이름을 조회하려면 사원번호를 입력하세요.</p>
+<p>사원번호 <input type="text" name="empid">
+			<input type="button" value="Search"></p>
+<p>조회한 사원의 이름 : <span class="empname"></span></p>
+</body>
+</html>

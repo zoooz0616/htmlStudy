@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("input[type='button']").click(function(){
+		$.get("res.jsp", function(data, status){
+			var oldValue = $("#result").text();
+			$("#result").text(oldValue+" "+data);
+		});
+	});
+});
+</script>
+</head>
+<body>
+<input type="button" value="요청">
+<div id="result"></div>
+</body>
+</html>

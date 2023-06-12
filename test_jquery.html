@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div {
+	width:100px; height:100px;
+	border: 1px solid black;
+}
+</style>
+<!-- jquery는 dom이 실행된 후에 자동실행됨.  -->
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script>
+$(document).ready(
+		function(){
+			$("#red").click(function(){
+				$("#box")
+				.css("background","red")
+				.css("border","1px dotted blue")
+				.html("<b>" + $(this).text()+"</b>"); //참조 체
+			});
+			$("#blue").click(function(){
+				$("#box")
+				.css("background","blue")
+				.css("border","2px dashed red")
+				.text($(this).text());
+			});
+			$("[type=button]").click(function(){
+				let message = $("[type=text]").val();
+				$("[type=text]").val("")
+				$("#box").text(message);
+			});
+		}
+		);
+</script>
+</head>
+<body>
+<div id="box"></div>
+<span id="red">RED</span> <span id="blue">BLUE</span><br>
+<input type="text"> <input type="button" value="확인">
+</body>
+</html>
