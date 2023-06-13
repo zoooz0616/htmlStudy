@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Niro EV 상세보기</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='info.css'>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="jquery.touchSwipe.min.js"></script>
+</head>
+
+<body>
+    <div class="top">
+        <div class="logo">logo</div>
+        <div class="features">
+            <div class="thumbnail">
+                <div class="thumbnail_image">
+                    <img class="thumbnail_image1"
+                        src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/niro-ev/23my/niroev_feature_bg.jpg"
+                        alt="">
+                    <img class="thumbnail_image2"
+                        src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/niro-ev/23my/niroev_feature_bg_mo.jpg"
+                        alt="">
+                </div>
+
+                <!-- 요약 정보-->
+                <div class="thumbnail_info">
+                    <div class="thumbnail_info_title">
+                        <div class="title">The 2024 Niro EV</div>
+                        <div>내일을 향한 움직임</div>
+                    </div>
+
+                    <div class="thumbnail_price">
+                        <div><span>51,710,000 </span>원부터</div>
+                        <div>(세제혜택 전 / 에어기준)</div>
+                    </div>
+
+                    <div class="thumbnail_spec">
+                        <ul class="thumbnail_spec_list">
+                            <li>
+                                <div>401Km</div>
+                                <div>1회 충전 최대주행</div>
+                            </li>
+                            <li>
+                                <div>150kW</div>
+                                <div>최고 출력</div>
+                            </li>
+                            <li>
+                                <div>10년/20만km</div>
+                                <div>고전압 배터리</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--3d 이미지 나타내기-->
+    <div class="mid_content">
+        <div class="mid_content_title">360° 외형</div>
+        <div class="container"> <!-- class="container" -->
+            <div class="img-container">
+                <div class="img360">
+                    <img decoding="async" id="myImg"
+                        src="https://www.kia.com/content/dam/kwp/kr/ko/configurator/niro-ev/trim/exterior/air/swp/swp_01.png"
+                        alt="">
+                </div>
+            </div>
+            <div class="caption">
+                ← Swipe → or Click and Drag to rotate
+            </div>
+            <div id="preload-imgs">sss</div>
+        </div>
+    </div>
+    <script src="info.js" defer></script>
+</body>
+
+</html>
